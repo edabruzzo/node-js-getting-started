@@ -1,0 +1,18 @@
+
+TUTORIAL HEROKU
+https://devcenter.heroku.com/articles/getting-started-with-nodejs#scale-the-app
+
+Para esclarar a aplicação é necessário mudar o número de dynos(instancias) que aceitam requests:
+
+Scaling an application on Heroku is equivalent to changing the number of dynos that are running. Scale the number of web dynos to zero:
+heroku ps:scale web=0
+
+
+Access the app again by hitting refresh on the web tab, or heroku open to open it in a web tab. You will get an error message because you no longer have any web dynos available to serve requests.
+
+Scale it up again:
+
+heroku ps:scale web=1
+
+
+O tipo e a quantidade de dynos (instancias) disponíveis depende do tipo de conta habilitada no Heroku.
